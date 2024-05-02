@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import youtube from '../youtubeAPI'
 
 function SearchBar ({onSubmit}){
@@ -185,6 +185,13 @@ function Youtube(){
             selectedVideo: response.data.items[0]
         })
     }
+
+    // pengganti componentDidMount
+    useEffect(() => {
+        onSearchSubmit("pow patrol")
+
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <div className="ui container" style={{ marginTop: "10px"}}>
