@@ -93,70 +93,6 @@ function DetailVideo({selectedVideo}){
     )
 }
 
-// class Youtube extends React.Component {
-//     state = { 
-//         videos: [],
-//         selectedVideo: null
-//     }
-
-//     setSelectedVideo = (video) => {
-//         this.setState({selectedVideo: video})
-//     }
-
-//     onSearchSubmit = async (term) => {
-//         const response = await youtube.get("/search", {
-//             params: {
-//                 q: term
-//             }
-//         })
-
-//         this.setState({ videos: response.data.items }, () => {
-//             console.log(this.state.videos)
-//             this.setState({selectedVideo: this.state.videos[0]}, () => {
-//                 console.log(this.state.selectedVideo)
-//                 console.log(this.state.selectedVideo.snippet.thumbnails.medium.url)
-//             })
-//         })
-//     }
-
-//     componentDidMount(){
-//         this.onSearchSubmit("pow patrol")
-//     }
-
-//     render() {
-//         return (
-//             <div className="ui container" style={{ marginTop: "10px"}}>
-//                 <SearchBar onSubmit={this.onSearchSubmit} />
-//                 <div style={{ marginTop: "10px", display: "flex" }}>
-//                     <div style={{ flex: "2.5", marginRight: "20px" }}>
-//                     {this.state.videos.length > 0 && (
-//                         <div>
-//                         {this.state.selectedVideo && (
-//                                 <div>
-//                                     <DetailVideo
-//                                         selectedVideo={this.state.selectedVideo}
-//                                     />
-//                                 </div>
-//                             )}
-//                         </div>
-//                     )}
-//                     </div>
-                    
-//                     <div style={{ flex: "1" }}>
-//                         {this.state.videos.length > 0 && (
-//                             <ListVideo
-//                                 videos={this.state.videos}
-//                                 setSelectedVideo={this.setSelectedVideo}
-//                             />
-//                         )}
-//                     </div>
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
-
-
 function Youtube(){
     const [state, setState] = useState({
         videos: [],
@@ -223,7 +159,5 @@ function Youtube(){
         </div>
     )
 }
-
-
 
 export default Youtube
